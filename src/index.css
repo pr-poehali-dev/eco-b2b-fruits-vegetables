@@ -14,26 +14,26 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 100 25% 40%; /* оливково-зеленый */
+    --primary: 102 50% 25%; /* более серьезный темно-зеленый */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 80 42% 77%; /* мятный */
+    --secondary: 140 20% 92%; /* легкий мятный оттенок */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 42 33% 94%; /* бежевый */
+    --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 80 42% 77%; /* мятный */
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 100 25% 40%; /* оливково-зеленый */
+    --ring: 102 50% 25%; /* темно-зеленый */
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -55,16 +55,16 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 100 25% 40%;
+    --primary: 102 40% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 80 30% 40%;
+    --secondary: 140 10% 20%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 42 15% 25%;
+    --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 80 30% 40%;
+    --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -92,17 +92,8 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
   }
-}
-
-@font-face {
-  font-family: 'Playfair Display';
-  src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-  font-display: swap;
-}
-
-.font-playfair {
-  font-family: 'Playfair Display', serif;
 }
 
 @keyframes fade-in {
@@ -117,30 +108,8 @@
 }
 
 .animate-fade-in {
-  animation: fade-in 0.8s ease-out forwards;
+  animation: fade-in 0.6s ease-out forwards;
 }
 
-.hover-scale {
-  transition: transform 0.3s ease;
-}
-
-.hover-scale:hover {
-  transform: scale(1.03);
-}
-
-/* Анимации для эффекта натуральности */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.float {
-  animation: float 4s ease-in-out infinite;
-}
+/* Импорт Inter для использования гротескного шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
